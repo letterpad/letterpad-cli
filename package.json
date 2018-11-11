@@ -1,0 +1,41 @@
+{
+    "name": "letterpad-cli",
+    "version": "1.0.0",
+    "description": "A CLI tool for managing Letterpad installations and upgrades",
+    "main": "lib/index.js",
+    "scripts": {
+        "dev": "babel-node ./lib/index.js",
+        "build": "babel src —-out-dir dist",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/letterpad/letterpad-cli.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/letterpad/letterpad-cli/issues"
+    },
+    "homepage": "https://github.com/letterpad/letterpad-cli#readme",
+    "dependencies": {
+        "axios": "^0.18.0",
+        "commander": "^2.19.0",
+        "decompress": "^4.2.0",
+        "download": "^7.1.0",
+        "enquirer": "^2.0.6",
+        "fs-extra": "^7.0.1",
+        "shelljs": "^0.8.2"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.1.2",
+        "@babel/core": "^7.1.2",
+        "@babel/node": "^7.0.0",
+        "@babel/plugin-proposal-class-properties": "^7.1.0",
+        "@babel/plugin-transform-async-to-generator": "^7.1.0",
+        "@babel/preset-env": "^7.1.0",
+        "babel-loader": "^8.0.4",
+        "webpack": "^4.25.0"
+    }
+}
