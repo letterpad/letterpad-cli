@@ -7,6 +7,9 @@ A CLI tool for managing Letterpad installations and upgrades
 #### Commands
 
 ```sh
+# Help
+letterpad --help
+
 # Install a new instance of letterpad
 letterpad install
 
@@ -19,6 +22,10 @@ letterpad build
 # List all the instances
 letterpad list
 
+# Edit a particular the instance
+letterpad edit
 
+# Remove a particular instance
+letterpad remove
 
 ```
