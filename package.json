@@ -38,6 +38,7 @@
         "@babel/plugin-transform-async-to-generator": "^7.1.0",
         "@babel/preset-env": "^7.1.0",
         "babel-loader": "^8.0.4",
+        "inquirer": "^6.2.0",
         "webpack": "^4.25.0"
     }
 }
