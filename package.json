@@ -11,7 +11,7 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "yarn test && yarn lint",
+            "pre-commit": "yarn test && yarn lint && git add .",
             "pre-push": "npm test",
             "...": "..."
         }
