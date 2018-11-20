@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+'use strict';
+require("@babel/register")({
+  plugins: [
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-transform-async-to-generator"
+    ],
+ "presets": ["@babel/preset-env"],
+});
+require("../lib/index.js")
