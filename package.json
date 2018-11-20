@@ -1,19 +1,19 @@
 {
     "name": "letterpad-cli",
-    "version": "1.0.0",
+    "version": "0.1.0",
     "description": "A CLI tool for managing Letterpad installations and upgrades",
     "main": "lib/index.js",
     "scripts": {
         "dev": "babel-node ./lib/index.js",
         "build": "babel src —-out-dir dist",
         "test": "jest",
-        "lint": "prettier --write '**/*.js'"
+        "lint": "eslint '**/*.js' --ignore-pattern node_modules/",
+        "pretty": "prettier --write '**/*.js'"
     },
     "husky": {
         "hooks": {
-            "pre-commit": "yarn test && yarn lint && git add .",
-            "pre-push": "npm test",
-            "...": "..."
+            "pre-commit": "yarn pretty && yarn lint && git add .",
+            "pre-push": "yarn test"
         }
     },
     "repository": {
@@ -21,12 +21,8 @@
         "url": "git+https://github.com/letterpad/letterpad-cli.git"
     },
     "keywords": [],
-    "author": "",
+    "author": "Abhishek Saha",
     "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/letterpad/letterpad-cli/issues"
-    },
-    "homepage": "https://github.com/letterpad/letterpad-cli#readme",
     "dependencies": {
         "axios": "^0.18.0",
         "cli-table": "^0.3.1",
@@ -46,8 +42,15 @@
         "@babel/plugin-transform-async-to-generator": "^7.1.0",
         "@babel/preset-env": "^7.1.0",
         "babel-core": "7.0.0-bridge.0",
+        "babel-eslint": "^10.0.1",
         "babel-jest": "^23.6.0",
         "babel-loader": "^8.0.4",
+        "eslint": "^5.9.0",
+        "eslint-config-standard": "^12.0.0",
+        "eslint-plugin-import": "^2.14.0",
+        "eslint-plugin-node": "^8.0.0",
+        "eslint-plugin-promise": "^4.0.1",
+        "eslint-plugin-standard": "^4.0.0",
         "husky": "^1.1.4",
         "inquirer": "^6.2.0",
         "jest": "^23.6.0",
