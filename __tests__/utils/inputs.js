@@ -11,7 +11,7 @@ module.exports = {
     cachePath,
     setInstallDefaults: installer => {
         installer.releases = [
-            { version: 1, zipball_url: "http://github.com/version/1" }
+            { version: 1, zipball_url: "http://github.com/version/1" },
         ];
         installer.cachePath = cachePath;
         installer.inputs.installationPath = installationPath;
@@ -24,5 +24,5 @@ module.exports = {
         installer.foldersToLink = ["index.txt"];
 
         return installer;
-    }
+    },
 };
