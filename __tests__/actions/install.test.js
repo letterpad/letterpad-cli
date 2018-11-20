@@ -5,7 +5,7 @@ const envEditor = require("../../lib/utilities/envEditor");
 const {
     installationPath,
     cachePath,
-    setInstallDefaults
+    setInstallDefaults,
 } = require("../utils/inputs");
 
 const fs = require("fs-extra");
@@ -30,7 +30,7 @@ describe("Check install", () => {
     it("Able to prepare the installation", async () => {
         await installer.prepare();
         const output = {
-            installationPath: installationPath
+            installationPath: installationPath,
         };
         expect(installer.inputs.installationPath).toBe(output.installationPath);
     });
