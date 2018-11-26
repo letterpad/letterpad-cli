@@ -15,12 +15,12 @@ describe("Can install from exisitng sources", () => {
     "/../playground/installations/lp"
   );
   beforeAll(() => {
-    rimraf.sync(path.join(installationPath));
+    rimraf.sync(installationPath);
     rimraf.sync(path.join(cachePath, "/instance.json"));
 
     installer = new install();
     installer = setInstallDefaults(installer);
-    installer.inputs.installationPath = path.join(installationPath);
+    installer.inputs.installationPath = installationPath;
 
     // assume these releases are available
     installer.releases = [

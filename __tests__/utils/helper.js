@@ -3,10 +3,10 @@ const fs = require("fs-extra");
 
 const playground = path.join(__dirname, "/../playground");
 
-export const installationPath = playground + "/installations";
-export const cachePath = playground + "/cache";
+const installationPath = playground + "/installations";
+const cachePath = playground + "/cache";
 
-const inputs = {
+module.exports = {
   installationPath,
   cachePath,
   setInstallDefaults: installer => {
@@ -43,4 +43,3 @@ const inputs = {
     fs.writeFileSync(installPath + "/index.txt", content, "utf8");
   },
 };
-module.exports = inputs;
