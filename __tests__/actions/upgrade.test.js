@@ -8,7 +8,7 @@ const {
   installationPath,
   cachePath,
   createInstallation,
-} = require("../utils/inputs");
+} = require("../utils/helper");
 
 describe("Can upgrade from exisitng sources", () => {
   let upgrader;

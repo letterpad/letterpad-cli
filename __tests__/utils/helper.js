@@ -1,10 +1,10 @@
 const path = require("path");
 const fs = require("fs-extra");
-const envEditor = require("../../lib/utilities/envEditor");
-const playgroundPath = path.join(__dirname, "/../playground");
 
-const installationPath = path.join(__dirname, "/../playground/installations");
-const cachePath = path.join(__dirname, "../playground/cache");
+const playground = path.join(__dirname, "/../playground");
+
+export const installationPath = playground + "/installations";
+export const cachePath = playground + "/cache";
 
 const inputs = {
   installationPath,
@@ -22,7 +22,14 @@ const inputs = {
 
     return installer;
   },
-  createInstallation: (installPath, version) => {
+
+  /**
+   * Creates a folder with 2 files.
+   *
+   * installPath (string) | The path where the folder will be created
+   *
+   */
+  createInstallation: (installPath, content) => {
     fs.ensureDirSync(installPath);
     const env = [
       "rootUrl=http://localhost:4040",
@@ -33,19 +40,7 @@ const inputs = {
       "baseName=",
     ];
     fs.writeFileSync(installPath + "/.env", env.join("\n"), "utf8");
-    fs.writeFileSync(installPath + "/index.txt", version, "utf8");
-  },
-  createPlayground: action => {
-    fs.ensureDirSync(playgroundPath + "/installations");
-    // creates the folder for a secific action (install, upgrade, ...etc)
-    switch (action) {
-      case "install":
-        break;
-      case "upgrade":
-        break;
-      default:
-        break;
-    }
+    fs.writeFileSync(installPath + "/index.txt", content, "utf8");
   },
 };
 module.exports = inputs;

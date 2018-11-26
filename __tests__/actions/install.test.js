@@ -2,7 +2,7 @@ const install = require("../../lib/actions/install");
 const config = require("../../lib/config");
 const tracker = require("../../lib/utilities/tracker");
 const envEditor = require("../../lib/utilities/envEditor");
-const { cachePath, setInstallDefaults } = require("../utils/inputs");
+const { cachePath, setInstallDefaults } = require("../utils/helper");
 
 const fs = require("fs-extra");
 const rimraf = require("rimraf");
