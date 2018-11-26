@@ -37,3 +37,5 @@ letterpad remove
 ```
 
 Every installation of a particular version has a cached copy of its sources inside `~/.cache/letterpad`. The `node_modules` folder of every installation is symlinked to its source to reduce space. This means if you install letterpad three times to run three different blogs, all installations will have only one shared `node_modules` folder.
+
+> This app does not take care of starting a letterpad instance. You will need to use something like a Process Manager for this.
