@@ -4,9 +4,9 @@
 
 A CLI tool for managing Letterpad installations, builds and upgrades.
 
+<img align="center" width="600" src="screenshot.png">
 
-<img align="center" width="600" src="http://g.recordit.co/VerQvHLdST.gif">
-
+_The above screenshot displays how letterpad can be installed using this CLI app._
 
 #### Installation
 
