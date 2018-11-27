@@ -4,6 +4,10 @@
 
 A CLI tool for managing Letterpad installations, builds and upgrades.
 
+
+<img align="center" width="600" src="http://g.recordit.co/VerQvHLdST.gif">
+
+
 #### Installation
 
 ```sh
