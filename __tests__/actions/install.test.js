@@ -60,7 +60,7 @@ describe("Can install from exisitng sources", () => {
   it("moved sources to destination", () => {
     installer.finish();
     const contents = envEditor.readEnv(installationPath + "/.env");
-    expect(contents.apiUrl).toBe("apiUrl");
+    expect(contents.rootUrl).toBe("rootUrl");
   });
 
   it("created symlink", () => {

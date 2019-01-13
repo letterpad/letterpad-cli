@@ -17,7 +17,6 @@ module.exports = {
     installer.inputs.apiUrl = "apiUrl";
     installer.inputs.uploadUrl = "uploadUrl";
     installer.inputs.appPort = 50;
-    installer.inputs.apiPort = 100;
     installer.foldersToLink = ["index.txt"];
 
     return installer;
@@ -33,10 +32,9 @@ module.exports = {
     fs.ensureDirSync(installPath);
     const env = [
       "rootUrl=http://localhost:4040",
-      "apiUrl=http://localhost:3030/graphql",
-      "uploadUrl=http://localhost:3030/upload",
+      "apiUrl=http://localhost:4040/graphql",
+      "uploadUrl=http://localhost:4040/upload",
       "appPort=4040",
-      "apiPort=3030",
       "baseName=",
     ];
     fs.writeFileSync(installPath + "/.env", env.join("\n"), "utf8");
