@@ -1,6 +1,6 @@
 {
   "name": "letterpad-cli",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A CLI tool for managing Letterpad installations and upgrades",
   "main": "lib/index.js",
   "scripts": {
